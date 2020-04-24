@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Head Or Tail</title>
+  <style>
+    .header {
+      background-color: greenyellow;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background-color: indianred;
+    }
+
+    .column {
+      float: left;
+      justify-content: center;
+      align-items: center;
+      width: 33.33%;
+      padding: 15px;
+    }
+
+    @media screen and (max-width:600px) {
+      .column {
+        width: 100%;
+      }
+
+      .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>TossCoin</h1>
+    <p>Test your 50% chance of wining</p>
+  </div>
+  <br>
+  <div class="header">
+    <h1>Choose Heads Or Tails</h1>
+  </div>
+  <br>
+  <div class="container">
+    <h1 class="message"></h1>
+
+  </div>
+  <div class=column></div>
+  <div class=column>
+    <button class="button">Heads</button>
+    <button class="button">Tails</button>
+  </div>
+  <div class=column></div>
+
+
+  <script>
+    const coinArray = ["Heads", "Tails"];
+    let score = [0, 0];
+    const message = document.querySelector(".message");
+    const buttons = document.querySelectorAll("button");
+    console.log(buttons);
+    for (let i = 0; i < buttons.length; i++) {
+      console.log(buttons[i]);
+      buttons[i].addEventListener("click", tossCoin);
+    }
+
+    function tossCoin(e) {
+      let playerGuess = e.target.innerText;
+      let computerToss = Math.floor(Math.random() * 2);
+      let computerGuess = coinArray[computerToss];
+      message.innerHTML = " Computer Selected: " + computerGuess + " & Player Selected: " + playerGuess;
+      let output;
+      if (playerGuess === computerGuess) {
+        output = " Player wins ." + "<br>" + "<br>";
+        score[0]++;
+      } else {
+        output = " Computer wins ." + "<br>" + "<br>";
+        score[1]++;
+      }
+
+      message.innerHTML += "<br>" + "<br>" + output + "  Player score: " + score[0] + "  Computer score: " + score[1];
+    }
+  </script>
+</body>
+
+</html>
