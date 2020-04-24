@@ -1,12 +1,36 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic 8 Ball</title>
 </head>
+
 <body>
     <h2>Ask Your Question:</h2>
     <input type="text" placeholder="your question">
-    
+    <button calss="button">Ask Me</button>
+    <p class="message"></p>
+
+    <script>
+        const answerArray = ["This is non of your business",
+            "It will be alright",
+            "Never let your kids alone",
+            "Nothing else matters",
+            "The dark can open the door",
+            "The force be with you",
+            "you sall not pass",
+            "Dont tell me what i cant do",
+            "Listen to your inner voice", ];
+        const message = document.querySelector(".message");
+        const question = document.querySelector("input");
+        const button = document.querySelector("button");
+        button.addEventListener("click", function () {
+            let res = Math.floor(Math.random() * answerArray.length);
+            message.innerText = question.value + " " + answerArray[res];
+            question.value="";
+        });
+    </script>
 </body>
+
 </html>
