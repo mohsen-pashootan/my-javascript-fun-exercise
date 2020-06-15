@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort the List</title>
+    <style>
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #f6f6f4;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th id="ID">Id<button id="sort-id">Sort</button></th>
+                    <th id="NAME">Name <button id="sort-name">Sort</button></th>
+                    <th id="RATE">Rate<button id="sort-rate">Sort</button></th>
+                    <th id="DESCRIPTION">Description<button id="sort-description">Sort</button></th>
+                </tr>
+            </thead>
+            <tbody id="main-body">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./codes.js">
+
+    </script>
+</body>
+
+</html>
