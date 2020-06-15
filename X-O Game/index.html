@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 30px;
+            text-align: center;
+
+        }
+
+        .center {
+            margin: auto;
+            width: 20%;
+            padding: 60px;
+        }
+
+        body {
+            background-image: url("paper.gif");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <table>
+            <tr>
+                <td class="clickme"></td>
+                <td class="clickme"></td>
+                <td class="clickme"></td>
+            </tr>
+            <tr>
+                <td class="clickme"></td>
+                <td class="clickme"></td>
+                <td class="clickme"></td>
+            </tr>
+            <tr>
+                <td class="clickme"></td>
+                <td class="clickme"></td>
+                <td class="clickme"></td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="center">
+        <p id="winner"></p>
+        <p id="Xscore"></p>
+        <p id="Oscore"></p>
+
+    </div>
+    <script src="xo.js"></script>
+</body>
+
+</html>
